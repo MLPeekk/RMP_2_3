@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.geneticscalculator.ui.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_menu"
+            app:destination="@+id/menu"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left" />
+        <action
+            android:id="@+id/action_home_to_second"
+            app:destination="@+id/second"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left" />
+        <action
+            android:id="@+id/action_home_to_genetics"
+            app:destination="@id/genetics"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.geneticscalculator.ui.fragments.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menu_to_home"
+            app:destination="@+id/home"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_home" />
+        <action
+            android:id="@+id/action_menu_to_profile"
+            app:destination="@+id/profile"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_relativesprofile" />
+        <action
+            android:id="@+id/action_menu_to_second"
+            app:destination="@id/second"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_second"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/second"
+        android:name="com.example.geneticscalculator.ui.fragments.SecondFragment"
+        android:label="Second"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_second_to_home"
+            app:destination="@+id/home"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_home" />
+        <action
+            android:id="@+id/action_second_to_menu"
+            app:destination="@id/menu"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_menu"/>
+        <action
+            android:id="@+id/action_second_to_date"
+            app:destination="@id/date"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_datesprofile"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/auth"
+        android:name="com.example.geneticscalculator.ui.fragments.AuthFragment"
+        android:label="Auth"
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_auth_to_home"
+            app:destination="@+id/home"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_home" />
+
+        <action
+            android:id="@+id/action_auth_to_signup"
+            app:destination="@+id/signup"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_signup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signup"
+        android:name="com.example.geneticscalculator.ui.fragments.SignUpFragment"
+        android:label="SignUp"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signup_to_auth"
+            app:destination="@+id/auth"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.geneticscalculator.ui.fragments.RelativesProfile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_relativesprofile">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_profile_to_menu"
+            app:destination="@id/menu"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_menu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/date"
+        android:name="com.example.geneticscalculator.ui.fragments.DatesProfile"
+        android:label="Dates"
+        tools:layout="@layout/fragment_relativesprofile">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_date_to_second"
+            app:destination="@id/second"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"
+            app:popUpTo="@layout/fragment_second"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/genetics"
+        android:name="com.example.geneticscalculator.ui.fragments.GeneticsFragment"
+        android:label="Genetics"
+        tools:layout="@layout/fragment_genetics">
+        <action
+            android:id="@+id/action_genetics_to_home"
+            app:destination="@id/home"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_right"
+            app:popExitAnim="@anim/fade_out_left"/>
+
+
+    </fragment>
+
+</navigation>
